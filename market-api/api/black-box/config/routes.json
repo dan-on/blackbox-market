@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/black-boxes",
+      "handler": "black-box.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/black-boxes/count",
+      "handler": "black-box.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/black-boxes/:id",
+      "handler": "black-box.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/black-boxes",
+      "handler": "black-box.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/black-boxes/:id",
+      "handler": "black-box.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/black-boxes/:id",
+      "handler": "black-box.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

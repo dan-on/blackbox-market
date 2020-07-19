@@ -1,0 +1,35 @@
+.logo-wrapper 
+    position: relative
+    
+.logo
+    display: block
+    margin: 0 auto
+    text-align: center
+    color: #ffffff
+    width: 300px
+    padding: 16px 8px
+    border: 3px #ffffff solid
+    font-size: 1.8rem
+    background-color: #000000
+    position: relative
+    z-index: 2
+
+.progress-line
+    width: 100%
+    background-color: #ffffff
+    height: 3px
+    animation-name: progress
+    animation-duration: 3s
+    position: absolute
+    z-index: 0
+    top: 32px
+
+@keyframes progress
+    0%
+        opacity: 0.2
+        width: 0
+        background-color: #cccccc
+    100%
+        background-color: #ffffff
+        width: 100%
+        opacity: 1

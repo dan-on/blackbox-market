@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "black_boxes",
+  "info": {
+    "name": "Black box"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "repository_url": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

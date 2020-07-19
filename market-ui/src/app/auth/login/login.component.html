@@ -1,0 +1,26 @@
+<div class="dark"></div>
+
+<div class="container">
+  <app-wide-logo></app-wide-logo>
+  <div class="sign-in-wrapper">
+    <h3 class="headline">Signing In</h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="signIn()" class="form form-primary sign-in-form">
+      <div class="row">
+        <div class="columns large-6 large-offset-3">
+          <div class="form-field">
+            <label for="email" class="form-label">Email address</label>
+            <input formControlName="email" id="email" type="email" class="form-input" placeholder="james@example.com">
+          </div>
+
+          <div class="form-field">
+            <label for="password" class="form-label">Password</label>
+            <input formControlName="password" type="password" id="password" class="form-input" placeholder="Enter password">
+          </div>
+
+          <button class="button button-primary full-width" [ngClass]="{'disabled': !loginForm.valid}" [disabled]="!loginForm.valid">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

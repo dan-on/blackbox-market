@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  market-api:
+    env_file: .env
+    image: strapi/strapi:3.0.6
+    restart: unless-stopped
+    ports:
+      - 1337:1337
+    volumes:
+      - ./market-api:/srv/app
+    links:
+      - market-db:market-db
+  market-db:
+    env_file: .env
+    image: postgres:12
+    volumes:
+      - ./market-db:/data/postgres
